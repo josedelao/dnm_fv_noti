@@ -1,0 +1,28 @@
+Laravel Framework 5.8
+
+
+ALTER TABLE table_name AUTO_INCREMENT=10000
+
+composer require guzzlehttp/guzzle (INSTALADO)					// https://packagist.org/packages/guzzlehttp/guzzle
+																// https://docs.guzzlephp.org/en/stable/
+
+composer require barryvdh/laravel-debugbar --dev (NO INSTALADO) // https://github.com/barryvdh/laravel-debugbar 
+
+composer require barryvdh/laravel-dompdf	(INSTALADO)		    // https://github.com/barryvdh/laravel-dompdf
+composer require elibyy/tcpdf-laravel	(NO INSTALADO)			// https://github.com/elibyy/tcpdf-laravel
+
+
+composer require "laravelcollective/html":"^5.8.0"	(INSTALADO)	// https://laravelcollective.com/docs/6.x/html
+or 
+composer require "laravelcollective/html":"^5.2.0"
+or 
+composer require laravelcollective/html
+
+
+composer require maatwebsite/excel			(INSTALADO)			// https://github.com/Maatwebsite/Laravel-Excel
+
+composer require mews/captcha  									// https://github.com/mewebstudio/captcha
+
+composer require milon/barcode 									// https://github.com/milon/barcode
+
+composer require yajra/laravel-datatables-oracle:"~9.0"   (INSTALADO) // https://github.com/yajra/laravel-datatables
