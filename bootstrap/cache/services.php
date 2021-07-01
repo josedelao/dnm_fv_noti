@@ -23,15 +23,21 @@
     19 => 'Illuminate\\Translation\\TranslationServiceProvider',
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
-    22 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
-    23 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    24 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    25 => 'Carbon\\Laravel\\ServiceProvider',
-    26 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    27 => 'App\\Providers\\AppServiceProvider',
-    28 => 'App\\Providers\\AuthServiceProvider',
-    29 => 'App\\Providers\\EventServiceProvider',
-    30 => 'App\\Providers\\RouteServiceProvider',
+    22 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    23 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
+    24 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    25 => 'Intervention\\Image\\ImageServiceProvider',
+    26 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    27 => 'Collective\\Html\\HtmlServiceProvider',
+    28 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
+    29 => 'Mews\\Captcha\\CaptchaServiceProvider',
+    30 => 'Carbon\\Laravel\\ServiceProvider',
+    31 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    32 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    33 => 'App\\Providers\\AppServiceProvider',
+    34 => 'App\\Providers\\AuthServiceProvider',
+    35 => 'App\\Providers\\EventServiceProvider',
+    36 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -45,13 +51,18 @@
     7 => 'Illuminate\\Pagination\\PaginationServiceProvider',
     8 => 'Illuminate\\Session\\SessionServiceProvider',
     9 => 'Illuminate\\View\\ViewServiceProvider',
-    10 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
-    11 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    12 => 'Carbon\\Laravel\\ServiceProvider',
-    13 => 'App\\Providers\\AppServiceProvider',
-    14 => 'App\\Providers\\AuthServiceProvider',
-    15 => 'App\\Providers\\EventServiceProvider',
-    16 => 'App\\Providers\\RouteServiceProvider',
+    10 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    11 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
+    12 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    13 => 'Intervention\\Image\\ImageServiceProvider',
+    14 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
+    15 => 'Mews\\Captcha\\CaptchaServiceProvider',
+    16 => 'Carbon\\Laravel\\ServiceProvider',
+    17 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    18 => 'App\\Providers\\AppServiceProvider',
+    19 => 'App\\Providers\\AuthServiceProvider',
+    20 => 'App\\Providers\\EventServiceProvider',
+    21 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (
@@ -160,6 +171,10 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
+    'html' => 'Collective\\Html\\HtmlServiceProvider',
+    'form' => 'Collective\\Html\\HtmlServiceProvider',
+    'Collective\\Html\\HtmlBuilder' => 'Collective\\Html\\HtmlServiceProvider',
+    'Collective\\Html\\FormBuilder' => 'Collective\\Html\\HtmlServiceProvider',
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
   ),
   'when' => 
@@ -201,6 +216,9 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
+    array (
+    ),
+    'Collective\\Html\\HtmlServiceProvider' => 
     array (
     ),
     'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => 
