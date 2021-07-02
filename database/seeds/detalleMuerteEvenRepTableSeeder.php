@@ -23,7 +23,6 @@ class detalleMuerteEvenRepTableSeeder extends Seeder
                 'causaMuerte'=> $faker->sentence, 
                 'autopsiaPaciente' =>'S', 
                 'resultadoAutopsia'=> $faker->sentence, 
-                
                 'fechaCreacion' => $faker->dateTime, 
                 'idUsuarioCrea' =>1, 
                 'fechaModificacion'=> $faker->dateTime, 

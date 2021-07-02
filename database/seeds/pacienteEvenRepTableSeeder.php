@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\PacienteEvenRep;
 use Illuminate\Database\Seeder;
 
 class pacienteEvenRepTableSeeder extends Seeder
@@ -20,7 +20,7 @@ class pacienteEvenRepTableSeeder extends Seeder
         for ($i = 0; $i < 2; $i++) {
             $random= Arr::random($array);
             $emb= Arr::random($emb);
-            EventoReporte::create([
+            PacienteEvenRep::create([
                 'idDetalleProporcion'=> $i+1, 
                 'idPais'=> $faker->numberBetween($min = 1, $max = 80), 
                 'idDepartamento' => $faker->numberBetween($min = 1, $max = 14), 
