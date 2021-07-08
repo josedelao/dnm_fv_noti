@@ -1,0 +1,8 @@
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/modals.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/navbar.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/general.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/icons.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/buttons.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/forms/general.html?#
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/forms/advanced.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/forms/advanced.html

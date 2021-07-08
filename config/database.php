@@ -43,36 +43,36 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-    
-        
+
         'mysql' => [
             'driver' => 'mysql',
-            'host' => '192.168.10.66',
-            'port' => '3305',
-            'database' => 'dnm_fv_si',
-            'username' => 'root',
-            'password' => 'Farmaco2020*',
+            'host' => env('DB_HOST', '192.168.10.66'),
+            'port' => env('DB_PORT', '3305'),
+            'database' => env('DB_DATABASE', 'dnm_fv_si'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', 'Farmaco2020'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
+            'prefix_indexes' => true,
             'strict' => true,
-            'engine' => 'InnoDB',
+            'engine' => null,
         ],
 
-        'mysql1012' => [
+        'mysql12' => [
             'driver' => 'mysql',
-            'host' => '192.168.10.12',
-            'port' => '3306',
-            'database' => 'dnm_catalogos',
-            'username' => 'oscar.merino',
-            'password' => 'Medicamentos01',
+            'host' => env('DB_HOST', '192.168.10.12'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'dnm_catalogos'),
+            'username' => env('DB_USERNAME', 'oscar.merino'),
+            'password' => env('DB_PASSWORD', 'Medicamentos01'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
+            'prefix_indexes' => true,
             'strict' => true,
-            'engine' => 'InnoDB',
+            'engine' => null,
         ],
-
 
 
         'pgsql' => [
