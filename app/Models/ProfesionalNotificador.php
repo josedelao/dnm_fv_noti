@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PorfesionalNotificador extends Model
+class ProfesionalNotificador extends Model
 {
     //
-    protected $table = 'dnm_fv_si.FV.profesionalNotificador';
+    protected $table = 'dnm_fv_si.FV_profesionalNotificador';
     protected $primaryKey = 'idProfesionalEvenRep';
 	public $timestamps = false;
 	protected $connection = 'mysql';
