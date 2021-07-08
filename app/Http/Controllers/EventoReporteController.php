@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Reporte;
+use App\Models\EventoReporte;
 use Illuminate\Http\Request;
 
-class ReporteController extends Controller
+class EventoReporteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ReporteController extends Controller
     public function index()
     {
         //
-        return Reporte::all();
+        return EventoReporte::all();
     }
 
     /**
@@ -26,9 +26,8 @@ class ReporteController extends Controller
     public function store(Request $request)
     {
         //
-        $reporte=Reporte::create($request->all());
-
-        return response()->json($reporte,201);
+        $eventoReporte = EventoReporte::create($request->all());
+        return response()->json($eventoReporte,201);
     }
 
     /**
@@ -37,10 +36,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Reporte $reporte)
+    public function show(EventoReporte $evento)
     {
         //
-        return $reporte;
+        return $evento;
     }
 
     /**
@@ -50,13 +49,12 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reporte $reporte)
+    public function update(Request $request, EventoReporte $evento)
     {
         //
-        $reporte->update($request->all());
+        $evento->update($request->all());
 
-        return response()->json($reporte, 200);
-
+        return response()->json($evento,200);
     }
 
     /**
@@ -65,10 +63,11 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reporte $reporte)
+    public function destroy(EventoReporte $evento)
     {
         //
-        $reporte->delete();
+        $evento->delete();
+
         return response()->json(null,204);
     }
 }

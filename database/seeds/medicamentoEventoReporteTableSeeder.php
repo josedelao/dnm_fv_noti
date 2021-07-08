@@ -14,10 +14,10 @@ class medicamentoEventoReporteTableSeeder extends Seeder
         //
         $faker = \Faker\Factory::create();
 
-        $array= [S,N];
+        $array= ['S','N'];
         
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $random= Arr::random($array);
             MedicamentoEventoReporte::create([
                 'idDetalleMedicamento' => $i+1, 

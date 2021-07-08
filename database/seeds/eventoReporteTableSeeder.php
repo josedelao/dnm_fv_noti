@@ -17,13 +17,13 @@ class eventoReporteTableSeeder extends Seeder
         $array= [1,2,3,5,7];
         
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $random= Arr::random($array);
             EventoReporte::create([
                 'eventoSerio' => 'S', 
                 'idSeriedad'=> $faker->numberBetween($min = 1, $max = 6), 
                 'idEvento' => $random, 
-                'idReporte' => $i, 
+                'idReporte' => $i+1, 
                 'fechaCreacion' => $faker->dateTime, 
                 'idUsuarioCrea' =>1, 
                 'fechaModificacion'=> $faker->dateTime, 

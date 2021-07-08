@@ -13,13 +13,13 @@ class pacienteEvenRepTableSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
 
-        $array= [F,M];
-        $emb= [S,N];
+        $array= ['F','M'];
+        $emb= ['S','N'];
         
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $random= Arr::random($array);
-            $emb= Arr::random($emb);
+            $embm= Arr::random($emb);
             PacienteEvenRep::create([
                 'idDetalleProporcion'=> $i+1, 
                 'idPais'=> $faker->numberBetween($min = 1, $max = 80), 
@@ -28,7 +28,7 @@ class pacienteEvenRepTableSeeder extends Seeder
                 'inicialesPaciente' => $faker->lexify('????'), 
                 'genero' => $random, 
                 'fechaNacimiento' =>$faker->dateTime,
-                'embarazoPaciente' =>$emb , 
+                'embarazoPaciente' =>$embm , 
                 'nombrePaciente' => $faker->name, 
                 'apellidoPaciente' => $faker->lastname, 
                 'edadDesconocida'=> 0,

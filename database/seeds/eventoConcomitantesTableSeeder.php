@@ -16,7 +16,7 @@ class eventoConcomitantesTableSeeder extends Seeder
         
         
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             
            EventoConcomitantes::create([
                 'idReaccionEvenReo'=>$i+1, 

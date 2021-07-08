@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Reporte;
+use App\Models\EventoConcomitantes;
 use Illuminate\Http\Request;
 
-class ReporteController extends Controller
+class EventoConcomitantesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ReporteController extends Controller
     public function index()
     {
         //
-        return Reporte::all();
+        EventoConcomitantes::all();
     }
 
     /**
@@ -26,9 +26,8 @@ class ReporteController extends Controller
     public function store(Request $request)
     {
         //
-        $reporte=Reporte::create($request->all());
-
-        return response()->json($reporte,201);
+        $concomitante = EventoConcomitante::create($request>all());
+        return response()->json($concomitante,201);
     }
 
     /**
@@ -37,10 +36,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Reporte $reporte)
+    public function show(EventoConcomitantes $concomitante)
     {
         //
-        return $reporte;
+        return $concomitante;
     }
 
     /**
@@ -50,13 +49,11 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reporte $reporte)
+    public function update(Request $request,EventoConcomitantes $concomitante)
     {
         //
-        $reporte->update($request->all());
-
-        return response()->json($reporte, 200);
-
+        $concomitante->update($request->all());
+        return response()->json($concomitante,200);
     }
 
     /**
@@ -65,10 +62,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reporte $reporte)
+    public function destroy(EventoConcomitantes $concomitante)
     {
         //
-        $reporte->delete();
+        $concomitante->delete();
         return response()->json(null,204);
     }
 }
