@@ -1,3 +1,43 @@
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/modals.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/navbar.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/general.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/icons.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/UI/buttons.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/forms/general.html?#
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/forms/advanced.html
+file:///C:/xampp72/htdocs/AdminLTE-3.1.0/pages/forms/advanced.html
+
+Laravel Framework 5.8
+
+
+ALTER TABLE table_name AUTO_INCREMENT=10000
+
+composer require guzzlehttp/guzzle (INSTALADO)					// https://packagist.org/packages/guzzlehttp/guzzle
+																// https://docs.guzzlephp.org/en/stable/
+
+composer require barryvdh/laravel-debugbar --dev (NO INSTALADO) // https://github.com/barryvdh/laravel-debugbar 
+
+composer require barryvdh/laravel-dompdf	(INSTALADO)		    // https://github.com/barryvdh/laravel-dompdf
+composer require elibyy/tcpdf-laravel	(NO INSTALADO)			// https://github.com/elibyy/tcpdf-laravel
+
+
+composer require "laravelcollective/html":"^5.8.0"	(INSTALADO)	// https://laravelcollective.com/docs/6.x/html
+or 
+composer require "laravelcollective/html":"^5.2.0"
+or 
+composer require laravelcollective/html
+
+
+composer require maatwebsite/excel			(INSTALADO)			// https://github.com/Maatwebsite/Laravel-Excel
+
+composer require mews/captcha  									// https://github.com/mewebstudio/captcha
+
+composer require milon/barcode 									// https://github.com/milon/barcode
+
+composer require yajra/laravel-datatables-oracle:"~9.0"   (INSTALADO) // https://github.com/yajra/laravel-datatables
+
+
+
 SHOW FULL TABLES FROM bicoshig LIKE '%MDRA%'; 
 SHOW FULL TABLES FROM ccdnm LIKE '%MDRA%'; 
 SHOW FULL TABLES FROM cdcol  LIKE '%MDRA%'; 
@@ -75,3 +115,44 @@ SHOW FULL TABLES FROM urh LIKE '%MDRA%';
 SHOW FULL TABLES FROM wapp_consulta_web LIKE '%MDRA%'; 
 SHOW FULL TABLES FROM wapp_facturas_prod LIKE '%MDRA%'; 
 SHOW FULL TABLES FROM webauth LIKE '%MDRA%'; 
+
+diseño responsible
+- mobile first / css flex grid flow elementos flotantes display low / flex
+code pen  - themes
+exlach
+
+
+Amazon AWS: Curso Completo - 2 de febrero
+
+PK: PK_reporteFarmaco: idReporte
+
+
+llaves foraneas 
+dnm_fv_si.DPX.reportesDuplicados: FK_reporteCriterios_reporteDuplicado
+dnm_fv_si.DPX.reportesDuplicados: FK_reporteCriterios_reporteJoined
+dnm_fv_si.DPX.reportesDuplicados: FK_reporteCriterios_reporteOrigen
+dnm_fv_si.FV.examenesLaboratorio: FK_examenesLaboratorio_reporteFarmaco
+dnm_fv_si.FV.historialClinico: FK_historialClinico_reporteFarmaco
+dnm_fv_si.FV.medicamentos: FK_ID_REPORTE
+dnm_fv_si.FV.reporteNaranjo: FK_HOJANARANJO_REPORTE
+dnm_fv_si.PRM.informeSeguridad: FK_informeSeguridad_reporteFarmaco
+
+Tablas foraneas 
+DPX.reportesDuplicados
+FV.examenesLaboratorio
+FV.historialClinico
+FV.medicamentos
+FV.reporteNaranjo
+PRM.informeSeguridad
+
+Constraint/ Column 
+idEstado					DF__reporteFa__idEst__5535A963
+alturaMedida_3				DF_reporteFarmaco_alturaMedida
+autopsiaPaciente_4			DF_reporteFarmaco_autopsiaPaciente
+edadDesconocida				DF_reporteFarmaco_edadDesconocida
+embarazo_3					DF_reporteFarmaco_embarazoPaciente
+eventoSerio_1				DF_reporteFarmaco_eventoSerio
+origenNotificacion			DF_reporteFarmaco_origenNotificacion
+reaccionOtroMedicamento_4	DF_reporteFarmaco_reaccionOtroMedicamento
+pesoMedida_3				DF_Table_1_pesoTipoPaciente
+PRIMARY KEY (clustered)		PK_reporteFarmaco
