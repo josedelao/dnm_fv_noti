@@ -11,4 +11,5 @@ class EventoReporte extends Model
     protected $primaryKey = 'idEventoReporte';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
 }

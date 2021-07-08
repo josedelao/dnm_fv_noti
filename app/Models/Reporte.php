@@ -12,20 +12,5 @@ class Reporte extends Model
     protected $primaryKey = 'idReporte';
 	public $timestamps = false;
 	protected $connection = 'mysql';
-
-    use HasFactory;
-    public $fillable = [
-        'idEstado',
-        'idTipoNotificacion',
-        'numeroReporte',
-        'passwordReporte',
-        'tituloReporte',
-        'fechaReporte',
-        'fechaNotificacion',
-        'origenNotificacion',
-        'fechaCreacion',
-        'idUsuarioCrea',
-        'fechaModificacion',
-        'idUsuarioModifica',
-    ];
+    protected $guarded = [];
 }
