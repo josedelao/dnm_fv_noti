@@ -16,7 +16,7 @@ class detalleProporcionPacienteTableSeeder extends Seeder
         
         
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             
            DetalleProporcionPaciente::create([
                 'edadAnios' =>$faker->numberBetween($min = 1, $max = 150), 
@@ -25,9 +25,9 @@ class detalleProporcionPacienteTableSeeder extends Seeder
                 'edadDias' =>$faker->numberBetween($min = 1, $max = 354), 
                 'edadHoras'=>$faker->numberBetween($min = 1, $max = 23), 
                 'edadMinutos'=>$faker->numberBetween($min = 1, $max = 60), 
-                'peso' =>$faker->andomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL), 
-                'altura'=>$faker->andomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL), 
-                'pesoNacimiento'=>$faker->andomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL),
+                'peso' =>$faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL), 
+                'altura'=>$faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL), 
+                'pesoNacimiento'=>$faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL),
                 'fechaCreacion' => $faker->dateTime, 
                 'idUsuarioCrea' =>1, 
                 'fechaModificacion'=> $faker->dateTime, 

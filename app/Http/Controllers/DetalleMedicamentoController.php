@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Reporte;
+use App\Models\DetalleMedicamento;
 use Illuminate\Http\Request;
 
-class ReporteController extends Controller
+class DetalleMedicamentoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class ReporteController extends Controller
     public function index()
     {
         //
-        return Reporte::all();
+        return DetalleMedicamento::all();
+    
     }
 
     /**
@@ -26,9 +27,8 @@ class ReporteController extends Controller
     public function store(Request $request)
     {
         //
-        $reporte=Reporte::create($request->all());
-
-        return response()->json($reporte,201);
+        $dMedicamento= DetalleMedicamento::create($request->all());
+        return response()->json($dMedicamento,201);
     }
 
     /**
@@ -37,10 +37,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Reporte $reporte)
+    public function show(DetalleMedicamento $dMedicamento)
     {
         //
-        return $reporte;
+        return $dMedicamento;
     }
 
     /**
@@ -50,13 +50,11 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reporte $reporte)
+    public function update(Request $request,DetalleMedicamento $dMedicamento)
     {
         //
-        $reporte->update($request->all());
-
-        return response()->json($reporte, 200);
-
+        $dMedicamento->update($request->all());
+        return response()->json($dMedicamento,200);
     }
 
     /**
@@ -65,10 +63,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reporte $reporte)
+    public function destroy(DetalleMedicamento $dMedicamento)
     {
         //
-        $reporte->delete();
+        $dMedicamento->delete();
         return response()->json(null,204);
     }
 }

@@ -1,5 +1,15 @@
 <?php
 use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\EventoReporteController;
+use App\Http\Controllers\ProfesionalNotificadorController;
+use App\Http\Controllers\ExamenesClinicosController;
+use App\Http\Controllers\EventoConcomitantesController;
+use App\Http\Controllers\DetalleEmbarazoPacienteController;
+use App\Http\Controllers\DetalleMedicamentoController;
+use App\Http\Controllers\DetalleProporcionPacienteController;
+use App\Http\Controllers\DetalleVacunaMedicamentoController;
+use App\Http\Controllers\DetalleMuerteController;
+
 use Illuminate\Http\Request;
 
 /*

@@ -14,13 +14,21 @@ class reaccionEventoReporteTableSeeder extends Seeder
         //
         $faker = \Faker\Factory::create();
 
-        $array= [1,2,3,5,7];
-        
+        $arrayE= [2,3,4,5,6,7];
+        $array= [1,2,3,4,5,6];
+        $arrayM= ['null',1,2];
+      
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 6; $i++) {
+            $randomE= Arr::random($arrayE);
             $random= Arr::random($array);
+            $randomM= Arr::random($arrayM);
             ReaccionEventoReporte::create([
-                'idEventoReporte'=> $i+1,   
+                'idEventoReporte'=> $randomE,
+                'idCondicion'=>$random,
+                'idPacienteEvenRep'=>$random,
+                'idHistoriaClinicaEvento'=>$random,
+                'idMedicamentoEvenRep'=>$random,
                 'fechaDeteccion' => $faker->datetime, 
                 'fechaIngresoDeteccion' => $faker->datetime, 
                 'fechaInicioReaccion' => $faker->datetime,  

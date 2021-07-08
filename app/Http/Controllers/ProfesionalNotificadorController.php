@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Reporte;
+use App\Models\ProfesionalNotificador;
 use Illuminate\Http\Request;
 
-class ReporteController extends Controller
+class ProfesionalNotificadorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ReporteController extends Controller
     public function index()
     {
         //
-        return Reporte::all();
+        return ProfesionalNotificador::all();
     }
 
     /**
@@ -26,9 +26,8 @@ class ReporteController extends Controller
     public function store(Request $request)
     {
         //
-        $reporte=Reporte::create($request->all());
-
-        return response()->json($reporte,201);
+        $profesional= ProfesionalNotificador::create($request->all());
+        return response()->json($profesional,201);
     }
 
     /**
@@ -37,10 +36,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Reporte $reporte)
+    public function show(ProfesionalNotificador $profesional)
     {
         //
-        return $reporte;
+        return $profesional;
     }
 
     /**
@@ -50,13 +49,11 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reporte $reporte)
+    public function update(Request $request,ProfesionalNotificador $profesional)
     {
         //
-        $reporte->update($request->all());
-
-        return response()->json($reporte, 200);
-
+        $profesional->update($request->all());
+        return response()->json($profesional,200);
     }
 
     /**
@@ -65,10 +62,10 @@ class ReporteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reporte $reporte)
+    public function destroy(ProfesionalNotificador $profesional)
     {
         //
-        $reporte->delete();
+        $profesional->delete();
         return response()->json(null,204);
     }
 }

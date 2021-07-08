@@ -15,14 +15,15 @@ class reporteTableSeeder extends Seeder
         //
         // Let's truncate our existing records to start from scratch.
         //Reporte::truncate();
-
+        $array= [1,2,4,5,];
         $faker = \Faker\Factory::create();
 
         // And now, let's create a few articles in our database:
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 3; $i++) {
+            $random= Arr::random($array);
             Reporte::create([
                 'idEstado' => 1,
-                'idTipoNotificacion' => $faker->unique()->randomDigitNot(0),
+                'idTipoNotificacion' => $random,
                 'numeroReporte' => $faker->bothify('?###??##'),
                 'passwordReporte' => $faker->bothify('?###??##'),
                 'tituloReporte' => $faker->sentence,
@@ -37,7 +38,7 @@ class reporteTableSeeder extends Seeder
             ]);
             Reporte::create([
                 'idEstado' => 1,
-                'idTipoNotificacion' => $faker->unique()->randomDigit,
+                'idTipoNotificacion' => $random,
                 'numeroReporte' => $faker->bothify('?###??##'),
                 'passwordReporte' => $faker->bothify('?###??##'),
                 'tituloReporte' => $faker->sentence,

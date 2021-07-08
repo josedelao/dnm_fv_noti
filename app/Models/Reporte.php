@@ -11,4 +11,5 @@ class Reporte extends Model
     protected $primaryKey = 'idReporte';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
 }
