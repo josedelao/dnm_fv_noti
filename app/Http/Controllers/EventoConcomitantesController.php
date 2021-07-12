@@ -14,7 +14,8 @@ class EventoConcomitantesController extends Controller
     public function index()
     {
         //
-        EventoConcomitantes::all();
+        return EventoConcomitantes::all();
+
     }
 
     /**
@@ -26,7 +27,7 @@ class EventoConcomitantesController extends Controller
     public function store(Request $request)
     {
         //
-        $concomitante = EventoConcomitante::create($request>all());
+        $concomitante = EventoConcomitantes::create($request->all());
         return response()->json($concomitante,201);
     }
 

@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\DetalleMuerteEvenRep;
+use App\Models\HistoriaClinicaEvento;
 use Illuminate\Http\Request;
 
-class DetalleMuerteController extends Controller
+class HistoriaClinicaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DetalleMuerteController extends Controller
     public function index()
     {
         //
-        return DetalleMuerteEvenRep::all();
+        return HistoriaClinicaEvento::all();
     }
 
     /**
@@ -26,8 +26,8 @@ class DetalleMuerteController extends Controller
     public function store(Request $request)
     {
         //
-        $dMuerte = DetalleMuerteEvenRep::create($request->all());
-        return response()->json($dMuerte,201);
+        $historiaClinica = HistoriaClinicaEvento::create($request->all());
+        return response()->json($historiaClinica,201);
     }
 
     /**
@@ -36,10 +36,10 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(DetalleMuerteEvenRep $dMuerte)
+    public function show(HistoriaClinicaEvento $historiaClinica)
     {
         //
-        return $dMuerte;
+        return $historiaClinica;
     }
 
     /**
@@ -49,11 +49,11 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DetalleMuerteEvenRep $dMuerte)
+    public function update(Request $request, HistoriaClinicaEvento $historiaClinica)
     {
         //
-        $dMuerte->update($request->all());
-        return response()->json($dMuerte,200);
+        $historiaClinica->update($request->all());
+        return response()->json($historiaClinica,200);
     }
 
     /**
@@ -62,10 +62,10 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DetalleMuerteEvenRep $dMuerte)
+    public function destroy(HistoriaClinicaEvento $historiaClinica)
     {
         //
-        $dMuerte->delete();
+        $historiaClinica->delete();
         return response()->json(null,204);
     }
 }

@@ -11,4 +11,6 @@ class ProfesionalNotificador extends Model
     protected $primaryKey = 'idProfesionalEvenRep';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

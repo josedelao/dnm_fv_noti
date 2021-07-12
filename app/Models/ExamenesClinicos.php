@@ -11,4 +11,5 @@ class ExamenesClinicos extends Model
     protected $primaryKey = 'idExamenClinico';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
 }

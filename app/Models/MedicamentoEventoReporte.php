@@ -11,4 +11,6 @@ class MedicamentoEventoReporte extends Model
     protected $primaryKey = 'idMedicamentoEvenRep';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

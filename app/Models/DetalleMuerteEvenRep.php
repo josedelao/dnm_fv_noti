@@ -11,4 +11,6 @@ class DetalleMuerteEvenRep extends Model
     protected $primaryKey = 'idDetalleMuerteEvenRep';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

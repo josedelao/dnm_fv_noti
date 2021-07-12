@@ -19,7 +19,7 @@ class eventoConcomitantesTableSeeder extends Seeder
         for ($i = 0; $i < 3; $i++) {
             
            EventoConcomitantes::create([
-                'idReaccionEvenReo'=>$i+1, 
+                'idReaccionEvenReo'=>$i+3, 
                 'idPrincioActivo'=>$faker->numberBetween($min = 1, $max = 150), 
                 'dosis' => $faker->sentence, 
                 'presentacion'=> $faker->sentence, 

@@ -11,4 +11,6 @@ class DetalleEmbarazoPaciente extends Model
     protected $primaryKey = 'idEmbarazo';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

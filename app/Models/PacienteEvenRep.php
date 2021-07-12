@@ -11,4 +11,6 @@ class PacienteEvenRep extends Model
     protected $primaryKey = 'idPacienteEvenRep';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

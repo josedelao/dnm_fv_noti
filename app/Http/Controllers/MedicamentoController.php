@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\DetalleMuerteEvenRep;
+use App\Models\MedicamentoEventoReporte;
 use Illuminate\Http\Request;
 
-class DetalleMuerteController extends Controller
+class MedicamentoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DetalleMuerteController extends Controller
     public function index()
     {
         //
-        return DetalleMuerteEvenRep::all();
+        return MedicamentoEventoReporte::all();
     }
 
     /**
@@ -26,8 +26,8 @@ class DetalleMuerteController extends Controller
     public function store(Request $request)
     {
         //
-        $dMuerte = DetalleMuerteEvenRep::create($request->all());
-        return response()->json($dMuerte,201);
+        $medicamento= MedicamentoEventoReporte::create($request->all());
+        return response()->json($medicamento,201);
     }
 
     /**
@@ -36,10 +36,10 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(DetalleMuerteEvenRep $dMuerte)
+    public function show(MedicamentoEventoReporte $medicamento)
     {
         //
-        return $dMuerte;
+        return $medicamento;
     }
 
     /**
@@ -49,11 +49,11 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DetalleMuerteEvenRep $dMuerte)
+    public function update(Request $request, MedicamentoEventoReporte $medicamento)
     {
         //
-        $dMuerte->update($request->all());
-        return response()->json($dMuerte,200);
+        $medicamento->update($request->all());
+        return response($medicamento, 200);
     }
 
     /**
@@ -62,10 +62,10 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DetalleMuerteEvenRep $dMuerte)
+    public function destroy(MedicamentoEventoReporte $medicamento)
     {
         //
-        $dMuerte->delete();
-        return response()->json(null,204);
+        $medicamento->delete();
+        return response(null, 204);
     }
 }

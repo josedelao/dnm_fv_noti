@@ -11,4 +11,5 @@ class EventoConcomitantes extends Model
     protected $primaryKey = 'idEventoConcomitantes';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
 }

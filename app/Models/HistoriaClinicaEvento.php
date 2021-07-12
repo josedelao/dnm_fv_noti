@@ -11,4 +11,6 @@ class HistoriaClinicaEvento extends Model
     protected $primaryKey = 'idHistoriaClinicaEvento';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

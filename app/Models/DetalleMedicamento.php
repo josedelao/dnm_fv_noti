@@ -11,4 +11,6 @@ class DetalleMedicamento extends Model
     protected $primaryKey = 'idDetalleMedicamento';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

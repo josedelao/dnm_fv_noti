@@ -11,4 +11,6 @@ class DetalleProporcionPaciente extends Model
     protected $primaryKey = 'idDetalleProporcion';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }

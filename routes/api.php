@@ -9,6 +9,11 @@ use App\Http\Controllers\DetalleMedicamentoController;
 use App\Http\Controllers\DetalleProporcionPacienteController;
 use App\Http\Controllers\DetalleVacunaMedicamentoController;
 use App\Http\Controllers\DetalleMuerteController;
+use App\Http\Controllers\HistoriaClinicaController;
+use App\Http\Controllers\MedicamentoController;
+use App\Http\Controllers\PacienteController;
+use App\Http\Controllers\ReaccionEventoController;
+use App\Http\Controllers\CiudadanoNotificadorController;
 
 use Illuminate\Http\Request;
 
@@ -123,3 +128,10 @@ Route::get('examenesClinicos/{examenClinico}', 'ExamenesClinicosController@show'
 Route::post('examenesClinicos', 'ExamenesClinicosController@store');
 Route::put('examenesClinicos/{examenClinico}', 'ExamenesClinicosController@update');
 Route::delete('examenesClinicos/{examenClinico}', 'ExamenesClinicosController@destroy');
+
+/*-----------Ciudadano Notificador----------------------------------------*/
+Route::get('ciudadanos', [CiudadanoNotificadorController::class,'index']);
+Route::get('ciudadanos/{ciudadano}', 'CiudadanoNotificadorController@show');
+Route::post('ciudadanos', 'CiudadanoNotificadorController@store');
+Route::put('ciudadanos/{ciudadano}', 'CiudadanoNotificadorController@update');
+Route::delete('ciudadanos/{ciudadano}', 'CiudadanoNotificadorController@destroy');

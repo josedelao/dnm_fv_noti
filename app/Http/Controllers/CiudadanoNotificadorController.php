@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\DetalleMuerteEvenRep;
+use App\Models\CiudadanoNotificador;
 use Illuminate\Http\Request;
 
-class DetalleMuerteController extends Controller
+class CiudadanoNotificadorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class DetalleMuerteController extends Controller
      */
     public function index()
     {
-        //
-        return DetalleMuerteEvenRep::all();
+        // 
+        return CiudadanoNotificador::all();
     }
 
     /**
@@ -26,8 +26,8 @@ class DetalleMuerteController extends Controller
     public function store(Request $request)
     {
         //
-        $dMuerte = DetalleMuerteEvenRep::create($request->all());
-        return response()->json($dMuerte,201);
+        $ciudadano= CiudadanoNotificador::create($request->all());
+        return response()->json($ciudadano, 201);
     }
 
     /**
@@ -36,10 +36,13 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(DetalleMuerteEvenRep $dMuerte)
+    public function show(CiudadanoNotificador $ciudadano)
     {
         //
-        return $dMuerte;
+        return response()->json([
+            'res' => true,
+            'ciudadano' => $ciudadano
+        ]);
     }
 
     /**
@@ -49,11 +52,11 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DetalleMuerteEvenRep $dMuerte)
+    public function update(Request $request, CiudadanoNotificador $ciudadano)
     {
         //
-        $dMuerte->update($request->all());
-        return response()->json($dMuerte,200);
+        $ciudadano->update($request->all());
+        return response()->json($ciudadano,200);
     }
 
     /**
@@ -62,10 +65,10 @@ class DetalleMuerteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DetalleMuerteEvenRep $dMuerte)
+    public function destroy(CiudadanoNotificador $ciudadano)
     {
         //
-        $dMuerte->delete();
+        $ciudadano->delete();
         return response()->json(null,204);
     }
 }

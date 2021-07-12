@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'mysql',
 
     /*
     |--------------------------------------------------------------------------
@@ -46,17 +46,17 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '192.168.10.66'),
-            'port' => env('DB_PORT', '3305'),
-            'database' => env('DB_DATABASE', 'dnm_fv_si'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'Farmaco2020'),
+            'host' => '192.168.10.66',
+            'port' => '3305',
+            'database' => 'dnm_fv_si',
+            'username' => 'root',
+            'password' => 'Farmaco2020*',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            'engine' => 'InnoDB',
         ],
 
         'mysql12' => [

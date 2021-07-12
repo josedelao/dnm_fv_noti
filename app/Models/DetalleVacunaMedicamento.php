@@ -11,4 +11,6 @@ class DetalleVacunaMedicamento extends Model
     protected $primaryKey = 'idDetalleVacuna';
 	public $timestamps = false;
 	protected $connection = 'mysql';
+    protected $guarded = [];
+
 }
